@@ -10,14 +10,15 @@ class BookHome extends Component {
     return (
       <div className="UpGoing">
         <MuiThemeProvider>
-          <List style={{ width: "40%", margin: "0 auto", textAlign: "left" }}>
+          <List style={{ width: "40%", margin: "0 auto", textAlign: "center" }}>
             {book.chapters.map(chapter => (
               <Link
+                key={book.id+chapter.url}
                 style={{ textDecoration: "none" }}
                 to={book.url + chapter.url}
               >
                 <ListItem
-                  style={{ fontSize: "30px" }}
+                  style={{ fontSize: "25px", lineHeight: "25px" }}
                   primaryText={chapter.title}
                 />
               </Link>

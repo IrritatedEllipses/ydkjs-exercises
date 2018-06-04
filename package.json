@@ -51,11 +51,17 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "translate": "node scripts/translate.js"
+    "translate": "node scripts/translate.js",
+    "lint": "eslint src",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "devDependencies": {
+    "all-contributors-cli": "^4.11.1",
     "babel-plugin-react-intl": "^2.4.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -64,6 +70,10 @@
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
+<<<<<<< HEAD
+=======
+    "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setupTests.js",
+>>>>>>> 5cdc7802f85e15c1f73d5827cf96d014de4d6139
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
